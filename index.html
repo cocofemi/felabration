@@ -1,30 +1,111 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <title>Event Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body
-    style="
-      background-color: #f1eee7;
-      background-image: url(./images/coming-soon.png);
-    "
+    class="bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white min-h-screen flex flex-col"
   >
-    <!-- <h1>Coming Soon</h1> -->
+    <!-- Navigation -->
+    <!-- <nav class="flex justify-between items-center px-6 py-4 bg-transparent">
+      <h1 class="text-xl font-bold">Felabration Chicago</h1>
+      <ul class="flex gap-6 text-sm font-medium">
+        <li><a href="#">Agenda</a></li>
+        <li><a href="#">Speakers</a></li>
+        <li><a href="#">Map</a></li>
+        <li><a href="#">Register</a></li>
+      </ul>
+    </nav> -->
+
+    <!-- Main Section -->
     <div
-      style="
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      "
+      class="flex flex-col md:flex-row items-center justify-between gap-10 px-6 md:px-20 mt-10"
     >
-      <img
-        src="./images/felabration.png"
-        alt="fela_banner"
-        height="550px"
-        style="max-width: 60%; height: auto"
-      />
+      <!-- Left Image -->
+      <div class="w-full md:w-1/2">
+        <img
+          src="./images/felabration.png"
+          alt="Event Poster"
+          class="rounded-lg shadow-lg w-full"
+        />
+      </div>
+
+      <!-- Right Content -->
+      <div class="w-full md:w-1/2 space-y-6 text-center md:text-left">
+        <h2 class="text-4xl font-bold">Felabration Chicago 2025</h2>
+        <p class="text-4xl font-medium text-gray-300">Coming soon!</p>
+
+        <!-- Countdown -->
+        <div
+          id="countdown"
+          class="flex justify-center md:justify-start gap-4 text-center text-black"
+        >
+          <div class="bg-white p-4 rounded-lg">
+            <p class="text-2xl font-bold" id="days">00</p>
+            <p class="text-sm text-gray-700">DAYS</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg">
+            <p class="text-2xl font-bold" id="hours">00</p>
+            <p class="text-sm text-gray-700">HOURS</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg">
+            <p class="text-2xl font-bold" id="minutes">00</p>
+            <p class="text-sm text-gray-700">MINS</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg">
+            <p class="text-2xl font-bold" id="seconds">00</p>
+            <p class="text-sm text-gray-700">SECS</p>
+          </div>
+        </div>
+
+        <!-- Register Button -->
+        <a
+          href="#"
+          class="inline-block px-6 py-3 bg-white text-blue-600 font-bold rounded-full shadow-lg hover:bg-gray-100 transition"
+        >
+          Register Now →
+        </a>
+      </div>
     </div>
+
+    <!-- Countdown Script -->
+    <script>
+      // const targetDate = new Date("2025-10-15T00:00:00").getTime();
+
+      // const updateCountdown = () => {
+      //   const now = new Date().getTime();
+      //   const diff = targetDate - now;
+
+      //   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      //   const hours = Math.floor(
+      //     (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      //   );
+      //   const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      //   const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      //   document.getElementById("days").textContent = days
+      //     .toString()
+      //     .padStart(2, "0");
+      //   document.getElementById("hours").textContent = hours
+      //     .toString()
+      //     .padStart(2, "0");
+      //   document.getElementById("minutes").textContent = minutes
+      //     .toString()
+      //     .padStart(2, "0");
+      //   document.getElementById("seconds").textContent = seconds
+      //     .toString()
+      //     .padStart(2, "0");
+      // };
+
+      // updateCountdown();
+      // setInterval(updateCountdown, 1000);
+    </script>
   </body>
 </html>
